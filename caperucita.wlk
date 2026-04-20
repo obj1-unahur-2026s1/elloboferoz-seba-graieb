@@ -1,31 +1,18 @@
-import manzana.*
 object caperucita {
-    var canastaActual = canasta.manzanas
-    method canastaActual () = canastaActual
-    method nuevaCantidadDeManzanas (nuevaCant) {
-        canastaActual = nuevaCant
+    var peso = 60
+    method peso () = peso
+    method pesoTotalDeManzanas () {
+        return canasta.manzanas() * canasta.pesoPorManzana()
     }
-    method peso () = 60
-    
+    method pesoDeCaperucitaConManzanas() {
+        peso = peso + self.pesoTotalDeManzanas()
+    }
 }
 object canasta {
     var manzanas = 6
+    method manzanas () = manzanas
     method pesoPorManzana () = 0.2
-    method cantidadDeManzanas (nuevaCantidad) {
+    method nuevaCantidadDeManzanas (nuevaCantidad) {
         manzanas = nuevaCantidad
-    }
-
-    
+    }   
 }
-/*
-//var llevaEnCanasta = 6
-    method llevaEnLaCanasta () = llevaEnCanasta
-    method nuevaCantidadDeManzanasEnCanasta (nuevaCant) {
-        llevaEnCanasta = nuevaCant
-    }
-    method peso () = 60
-    method llevaCanasta () = true
-    method seLeCaeManzanaDeLaCanasta () {
-        llevaEnCanasta = llevaEnCanasta - 1
-    }
-*/

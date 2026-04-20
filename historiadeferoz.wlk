@@ -1,7 +1,6 @@
 import feroz.*
 import caperucita.*
 import abuelita.*
-import manzana.*
 import cazador.*
 
 object historiaDelLobo{
@@ -14,13 +13,17 @@ object historiaDelLobo{
     method seComeAAbuelita() {
         feroz.comeAlgoDePeso(abuelita.peso())
     }
+    method seLeCaeUnaManzanaACaperucitaEnElBosque(){
+        canasta.nuevaCantidadDeManzanas(5)
+    }
     method seComeACaperucita() {
+        caperucita.pesoDeCaperucitaConManzanas()
         feroz.comeAlgoDePeso(caperucita.peso())
     }
     method seComeAlCazador() {
        feroz.comeAlgoDePeso(cazador.peso())
     }
     method esSaludableElLoboLuegoDelFestin() {
-        feroz.estaSaludable()
+        feroz.esSaludable()
     }
 } 
